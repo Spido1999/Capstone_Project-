@@ -16,10 +16,7 @@ public class UserLoginServiceImpl implements UserLogin {
 	@Override
 	public String validateUser(User uObj)throws UserNotFound {
 		System.out.println("validate");
-//		User userObj = this.userConsumer.getByEmailHandler(uObj.getUserID());
 		User userObj = this.userConsumer.getByEmailHandler(uObj.getUemail());
-		
-		uObj.setUserID(userObj.getUserID());
 		System.out.println("returned"+userObj);
 		System.out.println("serviceuserId"+userObj.getUserID());
 		if(userObj != null) {
